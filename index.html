@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html ng-controller="souscriptionAppController as ctrl" ng-class="homePrescription">
-	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>	
-
-		
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+    
+    <!------->
 <script type='text/javascript' src='https://c.la1-c1cs-fra.salesforceliveagent.com/content/g/js/51.0/deployment.js'></script>
 <script type='text/javascript'>
+liveagent.init('https://d.la1-c1cs-fra.salesforceliveagent.com/chat', '5720D0000008OYD', '00D0D0000008d1P');
+</script>
+
+
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #53BEE3;
 		font-family: "Salesforce Sans", sans-serif;
 	}
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #53BEE3;
+		outline: 10px solid #53BEE3;
 	}
 	@font-face {
 		font-family: 'Salesforce Sans';
@@ -24,23 +27,11 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+		embedded_svc.settings.displayHelpButton = true; //Ou faux
+		embedded_svc.settings.language = 'fr'; //Par exemple, saisissez 'en' ou 'en-US'
+		embedded_svc.settings.defaultMinimizedText = 'Chat avec Paymed'; //(affiche par dÃ©faut Discuter avec un expert)
 
-		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
-
-		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
-		// Settings for Chat
-		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-			// Returns a valid button ID.
-		//};
-		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+		embedded_svc.settings.loadingText = 'En attente'; //(affiche par dÃ©faut Chargement)
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
@@ -53,7 +44,7 @@
 			'Prescription',
 			{
 				baseLiveAgentContentURL: 'https://c.la1-c1cs-fra.salesforceliveagent.com/content',
-				deploymentId: '5720D0000008OYD',
+				deploymentId: '5720D000000CaUB',
 				buttonId: '5730D000000CaVs',
 				baseLiveAgentURL: 'https://d.la1-c1cs-fra.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'Prescription',
@@ -73,6 +64,6 @@
 		initESW('https://service.force.com');
 	}
 </script>
-		v2
+		v3
 	</body>
 </html>
